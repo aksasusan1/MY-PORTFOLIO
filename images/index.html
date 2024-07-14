@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <nav>
+                <img src="your-logo.png"  width="150px" height="150px" class="logo" alt="Logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Computer Science Engineer</p>
+                <h1>Hi, I'm <span>AKSA SUSAN MATHEW</span></h1>
+            </div>
+        </div>
+    </header>
+    
+ <!-- About Section -->
+<section id="about">
+    <div class="container">
+        <div class="about-wrapper">
+            <div class="about-col-1">
+                <img src="my pic-1.jpeg" alt="My Picture">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hello! I'm Aksa Susan Mathew, a passionate Computer Science Engineer with a knack for problem-solving and a love for coding. I thrive in dynamic environments and continuously seek out new challenges that allow me to grow and apply my skills effectively. Outside of Tech,I am a dancer , adventurous person loves to explore new places and make memories !!
+                    Life for me is a symphony of academics and personal growth. I'm always on the lookout for opportunities to develop my skills, believing in the magic of self-improvement</p>
+            
+                <!-- Text Links to Toggle Sections -->
+                <div class="toggle-links">
+                    <p class="toggle-link" onclick="toggleSection('skills')">Skills</p>
+                    <p class="toggle-link" onclick="toggleSection('hobbies')">Hobbies</p>
+                </div>
+                
+                <!-- Skills Section -->
+                <div class="skills hidden">
+                    <h2>Skills</h2>
+                    <ul>
+                        <li>HTML, CSS, JavaScript</li>
+                        <li>React, Node.js</li>
+                        <li>Python, Java</li>
+                        <li>Database Management</li>
+                    </ul>
+                </div>
+                
+                <!-- Hobbies Section -->
+                <div class="hobbies hidden">
+                    <h2>Hobbies</h2>
+                    <ul>
+                        <li>Reading</li>
+                        <li>Traveling</li>
+                        <li>Photography</li>
+                        <li>Music</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+      
+    <!-- Resume Section -->
+    <section id="resume">
+        <div class="container">
+            <h1 class="sub-title">Resume</h1>
+            <div class="resume-content">
+                
+                <a href="c:\Users\Aksa\Downloads\AKSA SUSAN MATHEW.pdf" download class="btn">Download Resume</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h1 class="sub-title">Contact</h1>
+            <div class="contact-form">
+                <form action="submit_form.php" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn">Send</button>
+                </form>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/aksa-susan-mathew-bb820725a/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:amathew@gitam.in" target="_blank"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.instagram.com/accounts/onetap/?next=%2F" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </section>
+
+<!-- JavaScript to Toggle Sections -->
+<script>
+    function toggleSection(section) {
+        var skillsSection = document.querySelector('.skills');
+        var hobbiesSection = document.querySelector('.hobbies');
+        
+        if (section === 'skills') {
+            skillsSection.classList.toggle('hidden');
+            hobbiesSection.classList.add('hidden');
+        } else if (section === 'hobbies') {
+            hobbiesSection.classList.toggle('hidden');
+            skillsSection.classList.add('hidden');
+        }
+    }
+</script>
+</body>
+</html>
